@@ -148,7 +148,7 @@ fig = px.scatter_3d(
     color='color',
     size='marker_size' if marker_mode == "Variable" else None,
     color_continuous_scale='Reds',
-    hover_data={'category': True, 'shortsum': True, 'numberOfComments': True, 'upVotes': True, 'createdAt': True, 'x': False, 'y': False, 'z': False, 'color': False, 'marker_size': False}
+    hover_data={'category': True, 'shortsum': True, 'numberOfComments': True, 'upVotes': True, 'createdAt': True, 'url':True, 'x': False, 'y': False, 'z': False, 'color': False, 'marker_size': False}
 )
 
 # Update marker for static mode
@@ -168,3 +168,4 @@ fig.update_layout(
     font=dict(color="white")
 )
 st.plotly_chart(fig, use_container_width=True)
+
